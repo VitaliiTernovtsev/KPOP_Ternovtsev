@@ -1,0 +1,21 @@
+Логін*: <input type="text" [(ngModel)]="userData.login" required>
+<div *ngIf="!(loginErr==='')"  id="loginErr">{{loginErr}}</div>
+<hr>
+Пароль*: <input type="password" [(ngModel)]="userData.password" required>
+<div *ngIf="!(passwordErr==='')" id="passwordErr">{{passwordErr}}</div>
+<hr>
+Підтвердіть пароль*: <input type="password" [(ngModel)]="userData.passwordRepeat" required>
+<div *ngIf="!(passwordRepeatErr==='')"  id="passwordRepeatErr">{{passwordRepeatErr}}</div>
+<hr>
+Email*: <input type="text" [(ngModel)]="userData.email" required>
+<div *ngIf="!(emailErr==='')"  id="emailErr">{{emailErr}}</div>
+<hr>
+Телефон: <input type="text" [(ngModel)]="userData.phone">
+<div *ngIf="!(phoneErr==='')"  id="phoneErr">{{phoneErr}}</div>
+<hr>
+Про себе*: <input type="text" [(ngModel)]="userData.about" required>
+<div *ngIf="!(aboutErr==='')"  id="aboutErr">{{aboutErr}}</div>
+<hr>
+Отримувати розсилку? <input type="checkbox" name="mail" [(ngModel)]="userData.mail" >
+<hr>
+<input type="button"  value="Надіслати" (click)="checkData()">
